@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PvB-cu-WeN">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Things-->
+        <scene sceneID="rAi-Bw-j4R">
+            <objects>
+                <tableViewController definesPresentationContext="YES" id="e0r-wP-xbh" customClass="ThingsToDoTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" id="eyv-kD-XAV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="none" indentationLevel="1" indentationWidth="10" reuseIdentifier="ThingIdentifier" rowHeight="68" id="Hx7-4t-7Ry" customClass="CustomCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hx7-4t-7Ry" id="mH9-D5-NG5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c27-Xf-AIn">
+                                            <rect key="frame" x="166" y="8" width="146" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="pjE-0S-cLA">
+                                            <rect key="frame" x="14" y="37" width="293" height="37"/>
+                                            <gestureRecognizers/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="Uqe-w7-Xtt" appends="YES" id="VR3-MH-YTZ"/>
+                                                <outletCollection property="gestureRecognizers" destination="OZh-JB-e36" appends="YES" id="9aF-h8-JdF"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <color key="tintColor" red="0.64066692714424256" green="0.86543367346938771" blue="0.24864443282023177" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="thingContent" destination="pjE-0S-cLA" id="95B-2d-I9Q"/>
+                                    <outlet property="timeLabel" destination="c27-Xf-AIn" id="osJ-8g-bli"/>
+                                    <outletCollection property="gestureRecognizers" destination="Uqe-w7-Xtt" appends="YES" id="h9z-Cm-eQV"/>
+                                    <outletCollection property="gestureRecognizers" destination="OZh-JB-e36" appends="YES" id="XjR-CQ-bVZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="e0r-wP-xbh" id="7u9-7s-ogR"/>
+                            <outlet property="delegate" destination="e0r-wP-xbh" id="LgY-Js-bLE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Things" id="oVB-0b-Am9"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="longPressGesture" destination="OZh-JB-e36" id="Nsl-6h-cpP"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUx-YT-bmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Uqe-w7-Xtt">
+                    <connections>
+                        <action selector="tapCellToEdit:" destination="e0r-wP-xbh" id="f0X-7K-UZG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="OZh-JB-e36">
+                    <connections>
+                        <action selector="longPressEditCell:" destination="e0r-wP-xbh" id="D1Z-py-tjW"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-3567" y="-127"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IXj-TE-lsO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PvB-cu-WeN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0PL-TM-5yf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="J5d-EJ-hpk">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="e0r-wP-xbh" kind="relationship" relationship="rootViewController" id="w8T-d6-kly"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2V-3V-G3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4007" y="-120"/>
+        </scene>
+    </scenes>
+</document>
